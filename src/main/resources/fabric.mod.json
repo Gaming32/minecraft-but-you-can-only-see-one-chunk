@@ -16,11 +16,8 @@
   "license": "MIT",
   "icon": "assets/minecraft-but-you-can-only-see-one-chunk/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "io.github.gaming32.minecraftbutyoucanonlyseeonechunk.ExampleMod"
-    ]
   },
   "mixins": [
     "minecraft-but-you-can-only-see-one-chunk.mixins.json"
