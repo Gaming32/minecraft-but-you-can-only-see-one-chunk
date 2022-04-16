@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "minecraft-but-you-can-only-see-one-chunk",
+  "version": "${version}",
+
+  "name": "minecraft-but-you-can-only-see-one-chunk",
+  "description": "You can only see one chunk",
+  "authors": [
+    "Gaming32"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/minecraft-but-you-can-only-see-one-chunk/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.gaming32.minecraftbutyoucanonlyseeonechunk.ExampleMod"
+    ]
+  },
+  "mixins": [
+    "minecraft-but-you-can-only-see-one-chunk.mixins.json"
+  ],
+  "accessWidener": "minecraft-but-you-can-only-see-one-chunk.accesswidener",
+
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "minecraft": ">=1.18.1",
+    "java": ">=17"
+  },
+  "breaks": {
+    "sodium": "*",
+    "optifabric": "*"
+  }
+}
