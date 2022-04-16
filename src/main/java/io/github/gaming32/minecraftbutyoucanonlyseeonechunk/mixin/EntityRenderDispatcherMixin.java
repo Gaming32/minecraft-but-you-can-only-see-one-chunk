@@ -10,7 +10,6 @@ import net.minecraft.client.render.Frustum;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.math.ChunkPos;
 
 @Mixin(EntityRenderDispatcher.class)
 public class EntityRenderDispatcherMixin {
@@ -24,8 +23,7 @@ public class EntityRenderDispatcherMixin {
         if (entity instanceof PlayerEntity) {
             return; // Always render players
         }
-        ChunkPos entityChunk = new ChunkPos((int)entity.getX() >> 4, (int)entity.getZ() >> 4);
-        if (!entityChunk.equals(MinecraftClient.getInstance().player.getChunkPos())) {
+        if (!entity.getChunkPos().equals(MinecraftClient.getInstance().player.getChunkPos())) {
             cir.setReturnValue(false);
         }
     }
